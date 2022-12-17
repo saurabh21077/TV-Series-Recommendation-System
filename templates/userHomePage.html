@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800");
+			* {
+			box-sizing: border-box;
+			margin: 0;
+			}
+
+			html, body {
+			margin: 0;
+			background: black;
+			font-family: "Montserrat", helvetica, arial, sans-serif;
+			font-size: 14px;
+			font-weight: 400;
+			}
+
+			.movie_card {
+			position: relative;
+			display: block;
+			height:280px;
+			width: 1300px;
+			margin: 50px auto;
+			overflow: hidden;
+			border-radius: 10px;
+			transition: all 0.4s;
+			}
+			.movie_card:hover {
+			transform: scale(1.02);
+			transition: all 0.4s;
+			}
+			.movie_card .info_section {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background-blend-mode: multiply;
+			z-index: 2;
+			border-radius: 10px;
+			}
+			.movie_card .info_section .movie_header {
+			position: relative;
+			padding: 25px;
+			height: 40%;
+			}
+			.movie_card .info_section .movie_header h1 {
+			color: #fff;
+			font-weight: 400;
+			}
+			.movie_card .info_section .movie_header h4 {
+			color: #9ac7fa;
+			font-weight: 400;
+			}
+			.movie_card .info_section .movie_header .minutes {
+			display: inline-block;
+			margin-top: 10px;
+			color: #fff;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid rgba(255, 255, 255, 0.13);
+			}
+			.genre{
+				display: inline-block;
+				color: #cee4fd;
+				margin-top: 5px;
+			}
+			.movie_card .info_section .movie_header{
+			display: inline-block;
+			color: #cee4fd;
+			margin-left: 10px;
+			}
+			.movie_card .info_section .movie_header .series_cover {
+			position: relative;
+			float: left;
+			margin-right: 20px;
+			height: 209px;
+			width:140px;
+			box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+			}
+			.movie_card .info_section .movie_desc {
+			padding-left: 25px;
+			padding-top: 25px;
+			padding-bottom: 25px;
+			padding-right: 50px;
+			height: 100%;
+			}
+			.movie_card .info_section .movie_desc .description {
+			color: #cfd6e1;
+			}
+			.movie_card .info_section .movie_social {
+			height: 10%;
+			padding-left: 15px;
+			padding-bottom: 20px;
+			}
+			.movie_card .info_section .movie_social ul {
+			list-style: none;
+			padding: 0;
+			}
+			.movie_card .info_section .movie_social ul li {
+			display: inline-block;
+			color: rgba(255, 255, 255, 0.4);
+			transition: color 0.3s;
+			transition-delay: 0.15s;
+			margin: 0 10px;
+			}
+			.movie_card .info_section .movie_social ul li:hover {
+			transition: color 0.3s;
+			color: rgba(255, 255, 255, 0.8);
+			}
+			.movie_card .info_section .movie_social ul li i {
+			font-size: 19px;
+			cursor: pointer;
+			}
+			.movie_card .blur_back {
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			height: 100%;
+			right: 0;
+			background-size: cover;
+			border-radius: 11px;
+			}
+
+			@media screen and (min-width: 768px) {
+			.movie_header {
+				width: 100%;
+			}
+
+			.movie_desc {
+				width: 100%;
+			}
+
+			.info_section {
+				background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
+			}
+
+			.blur_back {
+				width: 80%;
+				background-position: -100% 10% !important;
+			}
+			}
+			@media screen and (max-width: 768px) {
+			.movie_card {
+				width: 95%;
+				margin: 70px auto;
+				min-height: 350px;
+				height: auto;
+			}
+
+			.blur_back {
+				width: 100%;
+				background-position: 50% 50% !important;
+			}
+
+			.movie_header {
+				width: 100%;
+				margin-top: 90px;
+			}
+
+			.movie_desc {
+				width: 100%;
+			}
+
+			.info_section {
+				background: linear-gradient(to top, #141413 50%, transparent 100%);
+				display: inline-grid;
+			}
+			}
+
+			.labelstyle{
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				background-color: black;
+				border: 2px solid #d01414b3;
+			}
+
+		</style>
+	</head>
+	<body style = "height: 100%;
+	background-color: black;
+	background-image: url('/static/images/bg-blur.jpeg');
+	background-position: center;
+	background-size: cover;
+	box-shadow:inset 150px 120px 250px #000,inset -120px -100px 250px #000 ;"> 	
+		</br>
+		<p style="text-align:center; text-shadow: 2px; font-size: 40px; color: rgb(175, 67, 67)">Hi {{user_id}} <br/>
+		<h1 style="text-align:center; text-shadow: 2px; font-size: 40px; color: rgb(184, 184, 194);">Top 5 Recommendations for Users Genre Preference</h1>
+		<h1 style="text-align:center; text-shadow: 2px; font-size: 40px; color: rgb(184, 184, 194);">{{msg}}</h1>	
+		<BR/>
+		<div style="text-align:center;">
+		<a href = "/homePage">
+			<input style="text-align:center; border: none; color: white; padding: 15px 32px; text-decoration: none;
+			display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; font-family:monospace;
+			background-color: #d01414b3; border: 2px solid white;" type="submit" value="Get recommendations by Series name"/>
+		</a>
+		</div>	
+
+		{% for recommendation in recommendations %}
+		<div class="movie_card" id="bright">
+			<div class="info_section">
+				<div class="movie_header">
+				<img class="series_cover" src="{{recommendation[2]}}"/>
+				{% if recommendation[0]|length >0 %}
+				<h1>{{recommendation[0]}}</h1>
+				{% endif %}
+				{% if recommendation[1]|length >0 %}
+				<h4>{{recommendation[1]}}</h4>
+				{% endif %}
+				{% if recommendation[3]|length >0 %}
+				<h4>{{recommendation[3]}}</h4>
+				{% endif %}
+				{% if recommendation[6]|length >0 %}
+				<span class="minutes">{{recommendation[6]}}</span>
+				{% endif %}
+				</br>
+				{% if recommendation[4]|length >0 %}
+				<p class="genre">{{recommendation[4]}}</p>
+				{% endif %}
+				{% if recommendation[5]|length >0 %} 
+				<div class="movie_desc">
+					<p class="description">
+						{{recommendation[5]}} 
+					</p>
+				</div>
+				{% endif %}
+				</div>
+				
+			</div>
+			<div class="blur_back bright_back"></div>
+		</div>
+		{% endfor %}
+
+		
+
+
+
+	</body>
+</html>

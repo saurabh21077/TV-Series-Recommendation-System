@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Series Home Page</title>
+    
+    <style>
+        body, html{
+    height: 100%;
+    background-color: black;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  /* .bg_image{
+    background-image: url("/static/images/home_page_background.jpg");
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */
+  
+  
+  .Login-text {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: black;
+    border: 2px solid #d01414b3;
+  }
+  
+  .button:hover {
+    background-color: #d01414b3;
+    color: white;
+  }
+
+  .language {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+    </style>
+</head>
+<body>
+
+  <div style="background-image: url('/static/images/bgd.png');
+  filter: blur(4px);
+  -webkit-filter: blur(4px); 
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;" class="bg_image"></div>
+
+    <div class="Login-text">
+    <h1 style="text-shadow: 2px; font-size: 50px;">Welcome to the All in One Series</h1>
+    <p style="text-shadow: 2px; font-size: 35px;">Enjoy your favourite dramas</p>
+    <br/>	
+		<form method = "POST" action = "/">
+			<p style="text-shadow: 2px; font-size: 30px;">
+        User ID : <input type = "text" name = "user_id" placeholder = "Enter your user ID" value = "" 
+                    style="border: 2px solid red; border-radius: 4px; padding: 12px 20px; margin: 8px 0;" />
+        <br/><br/>
+        Password : <input type = "password" name = "password" placeholder = "Enter your password" value = "" 
+                    style="border: 2px solid red; border-radius: 4px; padding: 12px 20px; margin: 8px 0;" />
+			</p>
+      <input type = "radio" id = "new_user" name = "user_type" value = "New User">
+    	<label style="text-shadow: 2px; font-size: 30px;" for = "new_user">New User</label>
+      <input type = "radio" id = "new_user" name = "user_type" value = "Existing User" checked>
+      <label style="text-shadow: 2px; font-size: 30px;" for = "existing_user">Existing User</label>
+			<p>
+				<button class="button" type = "submit">Enter</button>
+			</p>
+		</form>
+		<br/><br/><br/>
+    {% if message|length >0 %}
+		<p style="text-shadow: 2px; font-size: 30px;"><b>{{message}}</b></p>
+    {% endif %}
+    </div>
+</body>
+</html>
