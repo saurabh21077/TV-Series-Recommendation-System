@@ -44,6 +44,13 @@ The recommendations are presented as a list, and each recommendation includes th
 
 ## <ins>CONTRIBUTIONS:</ins>
 **SAURABH PANDEY**
+- Extracted the whole dataset from the IMDB. The dataset was distributed into many tables therefore:
+    - Cleaned the dataset by keeping only the rows for TV series.
+    - Extracted the required information from various tables containing different information 
+    - Merged them together using Series ID as a unique key to get the required information.
+- Created KNN_Movie_Recommender function that applies KNearestNeighbour algorithm on the dataset.
+
+    
 
 
 **YUKTI GOSWAMI**
