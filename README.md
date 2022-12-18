@@ -28,7 +28,7 @@ Additionally, a password checker ensures that the user inputs the correct passwo
 
 The user is taken to a genre selection screen where they can choose their preferred genre upon logging in for the first time or if they have yet to indicate their preferences. Check boxes allow users to pick several genres. When a user clicks the "Submit" button, their selected genre is recorded in the Users.csv file, and they are then sent to the "Series Recommendation" page.
 
-Depending on the genres they select while registering, the user's top 5 series recommendations are shown on the recommendation page. When displaying the recommendations, the most recently broadcast series are given precedence.
+Depending on the genres they select while registering, the user's top 5 series recommendations are shown on the recommendation page. **<ins>Recommendations can take some time to load as information is fetched using Cinemagoer library.</ins>** When displaying the recommendations, the most recently broadcast series are given precedence.
 
 The user is also given the opportunity to get recommendations based on the series name by selecting the "Get recommendations by Series name" button displayed on this page. The user is taken to a different page which asks for user input for the series name and number of recommendations.
 
