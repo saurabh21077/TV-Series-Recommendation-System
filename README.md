@@ -49,6 +49,7 @@ The recommendations are presented as a list, and each recommendation includes th
     - Cleaned the dataset by keeping only the rows for TV series.
     - Extracted the required information from various tables containing different information 
     - Merged them together using Series ID as a unique key to get the required information.
+    - (Unused code) Writing code for dynamically merging different datasets and extrating maning columns and data.
 - Created KNN_Movie_Recommender function that applies KNearestNeighbour algorithm on the dataset and recommends the series on the basis of genre and also on the basis of Series name.
 - Integration of flask with python for userHomePage, homePage.
 - Fetching data from movies using Cinemagoer.
@@ -60,7 +61,7 @@ The recommendations are presented as a list, and each recommendation includes th
 
 **YUKTI GOSWAMI**
 - Implemented the functionalities for fetching and storing User details.
-- Cleaned the datasets and merged different linguistic datasets together.
+- Cleaned the datasets and merged different linguistic datasets together but could not use it as it contained many faults.
 - Implemented the functionality of fetching users genre choice from the website and storing it into the database. 
 - Integration of flask with python for loginPage, afterFirstLogin.
 - Implemented the User Interface (UI) for:
@@ -69,7 +70,9 @@ The recommendations are presented as a list, and each recommendation includes th
   - User Home Page
   - After first login
   - Information display of each Series
-- Collaborated in Python codes
+- Creating Flow Diagram for understanding of project using Miro board.
+- Collaborated in Python codes and models.
+- Creating Readme and documentations for the project.
 - Showcasing the project progress in timely manner using presentations.
 
 
