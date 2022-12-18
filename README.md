@@ -10,7 +10,7 @@
 link : [Click here to visit our site](http://143.244.135.235:8044)
 
 ## <ins>WORKING OF THE PROJECT:</ins>
-![Flow Diagram of Website](https://github.com/saurabh21077/TV-Series-Recommendation-System/blob/main/flowdiagram.jpg)
+![Flow Diagram of Website](https://github.com/saurabh21077/TV-Series-Recommendation-System/blob/main/flow%20diagram.jpg)
 
 **1. FIRST-TIME USER / NON-REGISTERED USER:** \
 The project's Login/Register Page is where it all begins. The user must create an account on the website with a username and password. 
