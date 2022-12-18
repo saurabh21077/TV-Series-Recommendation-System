@@ -51,7 +51,7 @@ The recommendations are presented as a list, and each recommendation includes th
     - Cleaned the dataset by keeping only the rows for TV series.
     - Extracted the required information from various tables containing different information 
     - Merged them together using Series ID as a unique key to get the required information.
-    - (Unused code) Writing code for dynamically merging different datasets and extrating maning columns and data.
+    - (Unused code) Writing code for dynamically merging different datasets and extracting meaningful columns and data.
 - Created KNN_Movie_Recommender function that applies KNearestNeighbour algorithm on the dataset and recommends the series on the basis of genre and also on the basis of Series name.
 - Integration of flask with python for userHomePage, homePage.
 - Fetching data from movies using Cinemagoer.
