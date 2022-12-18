@@ -44,25 +44,34 @@ The recommendations are presented as a list, and each recommendation includes th
 
 ## <ins>CONTRIBUTIONS:</ins>
 **SAURABH PANDEY**
+- Creating and Designing the models and flow of the project.
 - Extracted the whole dataset from the IMDB. The dataset was distributed into many tables therefore:
     - Cleaned the dataset by keeping only the rows for TV series.
     - Extracted the required information from various tables containing different information 
     - Merged them together using Series ID as a unique key to get the required information.
-- Created KNN_Movie_Recommender function that applies KNearestNeighbour algorithm on the dataset.
-- Integration of flask with python for loginPage.
-    
+- Created KNN_Movie_Recommender function that applies KNearestNeighbour algorithm on the dataset and recommends the series on the basis of genre and also on the basis of Series name.
+- Integration of flask with python for userHomePage, homePage.
+- Fetching data from movies using Cinemagoer.
+    - Fetching all data required to show in recommendation.
+- Created JSON files movie data and movie title.
+- Also collaborated in UI designs.
+- Integration of different developed module into one complete project.
 
 
 **YUKTI GOSWAMI**
 - Implemented the functionalities for fetching and storing User details.
+- Cleaned the datasets and merged different linguistic datasets together.
 - Implemented the functionality of fetching users genre choice from the website and storing it into the database. 
-- Integration of flask with python for Login/Signup, afterFirstLogin, userHomePage.
+- Integration of flask with python for loginPage, afterFirstLogin.
 - Implemented the User Interface (UI) for:
   - Login Page
   - Home Page
   - User Home Page
   - After first login
   - Information display of each Series
+- Collaborated in Python codes
+- Showcasing the project progress in timely manner using presentations.
+
 
 
 
