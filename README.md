@@ -7,6 +7,8 @@
 **Yukti Goswami (MT21109)** \
 **Saurabh Pandey (MT21077)** 
 
+link : [Click here to visit our site](http://143.244.135.235:8044)
+
 ## <ins>WORKING OF THE PROJECT:</ins>
 ![Flow Diagram of Website](https://github.com/saurabh21077/TV-Series-Recommendation-System/blob/main/Flow%20Diagram.jpg)
 
@@ -57,6 +59,7 @@ The recommendations are presented as a list, and each recommendation includes th
 - Created JSON files movie data and movie title.
 - Also collaborated in UI designs.
 - Integration of different developed module into one complete project.
+- Deployment of the project onto the server using gunicorn
 
 
 **YUKTI GOSWAMI**
@@ -74,15 +77,35 @@ The recommendations are presented as a list, and each recommendation includes th
 - Collaborated in Python codes and models.
 - Creating Readme and documentations for the project.
 - Showcasing the project progress in timely manner using presentations.
-
+- Deployment of the project onto the server using gunicorn
 
 
 
 ## <ins>SCREENSHOTS:</ins>
 <p> 
   Login Page<br>
-  <img src="https://github.com/saurabh21077/TV-Series-Recommendation-System/blob/main/LoginPage.png">
-  <img src="", width="250">
+  <img src="https://github.com/saurabh21077/TV-Series-Recommendation-System/blob/main/loginpage1.png">
+    
+  
+  Login page with successful registration message. <br>
+  <img src="https://github.com/saurabh21077/TV-Series-Recommendation-System/blob/main/loginpage2.png">
+    
+  
+  After First Login - Genre Selection page <br>
+  <img src="https://github.com/saurabh21077/TV-Series-Recommendation-System/blob/main/afterfirstlogin.png">
+    
+  
+   User Home Page<br>
+  <img src="https://github.com/saurabh21077/TV-Series-Recommendation-System/blob/main/userHomepage.png">
+    
+   
+   Home Page for getting recommendation from Series Name<br>
+  <img src="https://github.com/saurabh21077/TV-Series-Recommendation-System/blob/main/getreccom.png">
+    
+   
+  List view<br>
+  <img src="https://github.com/saurabh21077/TV-Series-Recommendation-System/blob/main/list%20view.png">
+    
 </p>
 
 
