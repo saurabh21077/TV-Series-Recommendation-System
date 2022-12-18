@@ -49,11 +49,21 @@ The recommendations are presented as a list, and each recommendation includes th
     - Extracted the required information from various tables containing different information 
     - Merged them together using Series ID as a unique key to get the required information.
 - Created KNN_Movie_Recommender function that applies KNearestNeighbour algorithm on the dataset.
-
+- Integration of flask with python for loginPage.
     
 
 
 **YUKTI GOSWAMI**
+- Implemented the functionalities for fetching and storing User details.
+- Implemented the functionality of fetching users genre choice from the website and storing it into the database. 
+- Integration of flask with python for Login/Signup, afterFirstLogin, userHomePage.
+- Implemented the User Interface (UI) for:
+  - Login Page
+  - Home Page
+  - User Home Page
+  - After first login
+  - Information display of each Series
+
 
 
 ## <ins>SCREENSHOTS:</ins>
