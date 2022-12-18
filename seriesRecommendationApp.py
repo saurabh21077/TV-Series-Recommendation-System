@@ -26,6 +26,7 @@ for title in movie_titles:
         sorted_movies.append((title[0],title[4]))
 sorted_movies = sorted(sorted_movies, key=lambda x: x[1], reverse=True)
 sorted_movies.append(no_years)
+sorted_movies = sorted_movies[:10000]
 
 def KNN_Movie_Recommender(test_point, k):
     # Create dummy target variable for the KNN Classifier
@@ -112,17 +113,17 @@ def userHomePage(user_id, userChoice_list=""):
     msg = userChoice_list
     sel_gen = userChoice_list.split(', ')
 # #     sel_gen = ['Action', 'Adventure', 'Horror', 'Thriller']
-    print(sel_gen)
+    # print(sel_gen)
     imdb_score = 10
     no_of_reco = 5
     test_point = [1 if genre in sel_gen else 0 for genre in genres]
 #     print(test_point)
     test_point.append(imdb_score)
     test_point.append(date.today().year)
-    print(test_point)
+    # print(test_point)
     table = KNN_Movie_Recommender(test_point, no_of_reco)
-    for movie, titleid, ratings, startDate in table:
-        print(str(movie)+" "+str(titleid)+" "+ str(ratings)+" "+str(startDate))
+    # for movie, titleid, ratings, startDate in table:
+    #     print(str(movie)+" "+str(titleid)+" "+ str(ratings)+" "+str(startDate))
     
     recoms = []
     # Creating an instance of the Cinemagoer class
@@ -165,8 +166,8 @@ def userHomePage(user_id, userChoice_list=""):
         if 'rating' in rec_keys:
             rating = str(show_details['rating'])
             
-        print(rating)
-        print(title)
+        # print(rating)
+        # print(title)
         recoms.append(( title, year, cover_url, director, s_genres, plot_outline, rating))
     
     # return app.response_class(stream_template("userHomePage.html", msg=msg, recommendations = recoms, user_id = user_id))
@@ -187,7 +188,7 @@ def homePage():
         # year
         # imdb_score = 9
         no_of_reco = request.form.get("no_of_reco")
-        print(sel_movie)
+        # print(sel_movie)
         # print("selected_movie")
         # print(sel_movie)
         # print("records")
@@ -198,8 +199,8 @@ def homePage():
         test_points = data[movies.index(sel_movie)]
         table = KNN_Movie_Recommender(test_points, int(no_of_reco)+1)
 
-        for movie, titleid, ratings, startDate in table:
-            print(str(movie)+" "+str(titleid)+" "+ str(ratings)+" "+str(startDate))
+        # for movie, titleid, ratings, startDate in table:
+        #     print(str(movie)+" "+str(titleid)+" "+ str(ratings)+" "+str(startDate))
 
         # Creating an instance of the Cinemagoer class
         ia = Cinemagoer()
@@ -207,7 +208,7 @@ def homePage():
         # Getting movie by IMDb ID
         #('0468569')
         for r in table:
-            print(r)
+            # print(r)
             if r[0]==sel_movie:
                 continue
             show_id = r[1][2:] 
@@ -244,12 +245,11 @@ def homePage():
             if 'rating' in rec_keys:
                 rating = str(show_details['rating'])
             
-            print(rating)
-            print(title)
+            # print(rating)
+            # print(title)
             recoms.append((title, year, cover_url, director, s_genres, plot_outline, rating))
     
     return render_template("homePage.html", recommendations=recoms, movies=sorted_movies)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5013)
-

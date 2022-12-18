@@ -34,7 +34,21 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .Inst-text {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    /* transform: translate(-40%, -45%); */
     width: 80%;
     padding: 20px;
     text-align: center;
@@ -72,15 +86,16 @@
   -webkit-filter: blur(4px); 
   height: 100%;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;" class="bg_image"></div>
 
     <div class="Login-text">
-    <h1 style="text-shadow: 2px; font-size: 50px;">Welcome to the All in One Series</h1>
-    <p style="text-shadow: 2px; font-size: 35px;">Enjoy your favourite dramas</p>
-    <br/>	
+    
+      
+    <h1 style="text-shadow: 2px; font-size: 40px;">Welcome to the All in One Series</h1>
+    <p style="text-shadow: 2px; font-size: 25px;">Get recommendations for your favourite dramas</p>
+  
 		<form method = "POST" action = "/">
-			<p style="text-shadow: 2px; font-size: 30px;">
+			<p style="text-shadow: 2px; font-size: 20px;">
         User ID : <input type = "text" name = "user_id" placeholder = "Enter your user ID" value = "" 
                     style="border: 2px solid red; border-radius: 4px; padding: 12px 20px; margin: 8px 0;" />
         <br/><br/>
@@ -88,17 +103,37 @@
                     style="border: 2px solid red; border-radius: 4px; padding: 12px 20px; margin: 8px 0;" />
 			</p>
       <input type = "radio" id = "new_user" name = "user_type" value = "New User">
-    	<label style="text-shadow: 2px; font-size: 30px;" for = "new_user">New User</label>
+    	<label style="text-shadow: 2px; font-size: 20px;" for = "new_user">New User</label>
       <input type = "radio" id = "new_user" name = "user_type" value = "Existing User" checked>
-      <label style="text-shadow: 2px; font-size: 30px;" for = "existing_user">Existing User</label>
+      <label style="text-shadow: 2px; font-size: 20px;" for = "existing_user">Existing User</label>
 			<p>
 				<button class="button" type = "submit">Enter</button>
 			</p>
 		</form>
-		<br/><br/><br/>
+
+		<br/>
     {% if message|length >0 %}
-		<p style="text-shadow: 2px; font-size: 30px;"><b>{{message}}</b></p>
+		<p style="text-shadow: 2px; font-size: 20px;"><b>{{message}}</b></p>
     {% endif %}
+
+    
+
     </div>
+
+    <div class="Inst-text">
+      <p>
+        DPM CLASS PROJECT<br>
+        Monsoon 2022  
+      </p>
+      <p>
+        INSTRUCTOR: Dr. Pravesh Biyani<br>
+        TAs: Raashid Altaf, Mohd. Siraj Ansari, Gitansh Raj Satija        
+      </p>
+      <p>
+        GROUP: Yukti Goswami (MT21109)<br> Saurabh Pandey (MT21077)
+      </p>
+    </div>
+
+
 </body>
 </html>
