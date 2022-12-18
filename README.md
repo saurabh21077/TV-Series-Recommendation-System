@@ -58,7 +58,8 @@ The recommendations are presented as a list, and each recommendation includes th
 
 ## <ins>SCREENSHOTS:</ins>
 <p> 
-  <img src="", width="250">
+  Login Page<br>
+  <img src="https://github.com/saurabh21077/TV-Series-Recommendation-System/blob/main/LoginPage.png">
   <img src="", width="250">
 </p>
 
